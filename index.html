@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css'
+  integrity='sha512-vZWT27aGmde93huNyIV/K7YsydxaafHLynlJa/4aPy28/R1a/IxewUH4MWo7As5I33hpQ7JS24kwqy/ciIFgvg=='
+  crossorigin='anonymous' />
+<style>
+   *{
+        padding: 0px;
+        margin: 0px;
+        font-family: 'Noto Sans TC', sans-serif;
+
+        
+    }
+    a{
+          text-decoration: none;
+    }
+    
+  .navbar>ul{
+    background-color: #ccc;
+    display: flex;
+    flex-direction: row-reverse;
+    list-style: none;
+    margin-right: 10px;
+    
+  }
+  .navbar>ul a{
+    display: inline-block;
+    padding: 5px;
+    margin: 5px;
+    list-style: none;
+    color: black;
+    text-decoration: none;
+  }
+  .navbar>ul a:hover{
+    text-decoration: underline;
+    /* color: blanchedalmond; */
+  }
+  li{
+    padding: 5px;
+    margin: 5px;
+  }
+  .content{
+    text-align: center;
+
+  }
+  #logo{
+    margin-top: 100px;
+  }
+  .search{
+    position: relative;
+    display: inline-block;
+  }
+  .search :first-child{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-45%);
+    /* left:calc(100px/2); */
+    left: 70px;
+  }
+  .search :last-child{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-45%);
+    right: 70px;
+  }
+  .search input{
+    font-size: 20px;
+    width: 550px;
+    border-radius: 20px;
+    border: none;
+    /* box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset; */
+    box-shadow: 0 0 5px #aaa;
+    height: 15px;
+    margin: 50px;
+    padding: 10px 50px;
+  }
+  ::placeholder{
+    font-size: 20px;
+  }
+  .search input:focus{
+
+    outline: none;
+  }
+  .search:focus{
+    border: 2px blue solid;
+  }
+  .user{
+    position: relative;
+    display: inline-block;
+  }
+  .user:before {
+  font-family: "Font Awesome 5 Free"; 
+  font-weight: 900; 
+  content: "\f007";
+  font-size: 14px;
+  }
+  .user:before {
+  position: absolute;
+  left: 4px;
+  top: 50%;
+  transform: translateY(-50%); 
+  }
+  .user input{
+    text-indent:20px
+  }
+  .user input:focus+label{
+    border: blue;
+  }
+  .user:focus{
+    border: blue;
+  }
+  #container>.wrap1{
+    position: relative;
+    width: 700px;
+    margin: auto;
+    /* background-color: burlywood; */
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 0px;
+  }
+  #container>.wrap1 a{
+    position: relative;
+    font-size: 10px;
+    display:block;
+    border-radius: 10px;
+    width: 120px;
+    height: 150px;
+    /* background-color: #ccc; */
+    margin: 20px 10px;
+    box-sizing: border-box;
+    padding: 20px;
+    
+  }
+  .icon{
+    width: 100%;
+    height: 80%;
+  }
+  .icon i{
+    margin-top: 20px;
+
+    /* background-color: cadetblue; */
+  }
+  .icon::before{
+    content: '';
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 999em;
+    background-color: #f0f5f5;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+  }
+  .wrap1>a:hover{
+    background-color:#ccc;
+    z-index: 0;
+  }
+  .text{
+    display: block;
+    margin-bottom: 20px;
+  }
+</style>
+<body>
+  <div class="navbar">
+    <ul>      
+      <a href="">img</a>
+      <a href="">圖片</a>
+      <a href="">Gmail</a>
+      <!-- <li>圖片</li>
+      <li>Gmail</li> -->
+    </ul>
+  </div>
+  <div class="content">
+    <div id="logo">
+      <img src="./logo.png" alt="">
+    </div>
+    <div class="wrap">
+      <label class="search">
+        <i class="fas fa-search"></i>
+        <input type="text" placeholder="搜尋 Google 或輸入網址">
+        <i class="fas fa-microphone "></i>
+      </label>
+    </div>
+    <!-- <label class="user">
+      <input type="text" placeholder="帳號" />
+    </label> -->
+    <div id="container">
+      <div class="wrap1">
+        <a href="">
+          <div class="icon">
+            <span style="color: tomato;"></span><i class="fab fa-youtube fa-3x" style="color: tomato;" ></i></span>
+          </div>
+          Youtube
+        </a>
+        <a href="">
+          <div class="icon">
+            <span style="color: tomato;"><i class="fab fa-youtube fa-3x" ></i></span>
+          </div>
+          <span class="text">Youtube</span>
+        </a>
+        <a href="">
+          <div class="icon">
+            <span style="color: tomato;"><i class="fab fa-youtube fa-3x" ></i></span>
+          </div>
+          <span class="text">Youtube</span>
+        </a>
+        <a href="">
+          <div class="icon">
+            <span style="color: tomato;"><i class="fab fa-youtube fa-3x" ></i></span>
+          </div>
+          <span class="text">Youtube</span>
+        </a>
+        <a href="">
+          <div class="icon">
+            <span style="color: tomato;"><i class="fab fa-youtube fa-3x" ></i></span>
+          </div>
+          <span class="text">Youtube</span>
+        </a>
+        <a href="">
+          <div class="icon">
+            <span style="color: dodgerblue;"><i class="fab fa-facebook-square fa-3x"></i></span>
+          </div>
+          <span class="text">Facebook</span>
+        </a>
+        <a href="">
+          <div class="icon">
+            <span style="color: dodgerblue;"><i class="fab fa-facebook-square fa-3x"></i></span>
+          </div>
+          <span class="text">Facebook</span>
+        </a>
+        <a href="">
+          <div class="icon">
+            <span style="color: dodgerblue;"><i class="fab fa-facebook-square fa-3x"></i></span>
+          </div>
+          <span class="text">Facebook</span>
+        </a>
+        <a href="">
+          <div class="icon">
+            <span style="color: dodgerblue;"><i class="fab fa-facebook-square fa-3x"></i></span>
+          </div>
+          <span class="text">Facebook</span>
+        </a>
+        <a href="">
+          <div class="icon">
+            <span style="color: dodgerblue;"><i class="fab fa-facebook-square fa-3x"></i></span>
+          </div>
+          <span class="text">Facebook</span>
+        </a>
+
+      </div>
+    </div>
+  </div>
+</body>
+</html>
